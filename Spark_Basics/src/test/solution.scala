@@ -24,8 +24,8 @@ object solution
     val csv_data_header = spark.read.format("com.databricks.spark.csv").option("header","true").load("D:/sample_data.csv")
     println(csv_data_header.show(10))
     //xml
-    
-    
+    val xmlData= spark.read.format("com.databricks.spark.xml").option("rowTag", "product").load("D:/Training_doc/Spark/xmlParse.xml")
+    xmlData.show()
   }
   
 }
