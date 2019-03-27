@@ -8,7 +8,7 @@ object solution
   
   def main(args: Array[String])
   {
-    Logger.getLogger("org").setLevel(Level.DEBUG)
+    Logger.getLogger("org").setLevel(Level.ERROR)
     val spark = SparkSession.builder()
         .master("local[*]")
         .appName("Sample")
