@@ -22,7 +22,7 @@ object solution
     val csv_data = spark.read.csv("D:/sample_data.csv")
     // println(csv_data.show(5))
     val csv_data_header = spark.read.format("com.databricks.spark.csv").option("header","true").load("D:/sample_data.csv")
-    println(csv_data_header.show(5))
+    println(csv_data_header.show(10))
     //xml
     
     
